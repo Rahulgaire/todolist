@@ -1,0 +1,75 @@
+
+    body{
+        background-color: #aba2a2;
+    }
+    .container{
+        margin: auto;
+        flex-direction: column;
+        width: 60vw;
+        border: 2px solid black;
+        height: auto;
+        
+    }
+    h1{
+        text-align: center;
+        color: red;
+    }
+.text {
+    width: 50vw;
+    height: 40vh;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+   
+   
+}
+textarea{
+    padding: 5px 20px;
+    caret-color: rgb(255, 17, 0);
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50vw;
+    height: 40vh;
+    margin: auto;
+    box-shadow: 2px 3px 22px;
+}
+.btn{
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-right:10% ;
+    margin-top: 5%;
+    gap: 10px;
+}
+button {
+    width: 120px;
+    height: 50px; /* Slightly increased for better proportions */
+    background-color: tomato;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Adds slight roundness */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+button:hover {
+    background-color: rgb(255, 38, 0);
+    color: rgb(40, 34, 34);
+    
+}
+ul{
+    width: 50vw;
+    margin: auto;
+
+
+}
+li{
+    box-shadow: 2px 4px 8px black;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    list-style: none;
+}
+

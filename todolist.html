@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="tudo.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="result">
+            <ul id="taskList">
+                <li>
+                    <div>
+                        <span>hello</span>
+                    </div>
+                    <div><span onclick="del(this)">❌</span></div>
+                </li>
+
+                <div id="result1"></div>
+
+            </ul>
+        </div>
+        <div class="text">
+            <textarea id="taskInput" placeholder="Enter your task here..."></textarea> <!-- Fixed ID -->
+        </div>
+        <div class="btn">
+            <button onclick="add()">Add</button>
+        </div>
+    </div>
+
+    <script>
+        let input1 = document.getElementById("taskInput"); // Fixed ID
+        let resultDiv = document.getElementById("result1");
+
+        function add() {
+            let taskText = input1.value.trim(); // Get input value and remove spaces
+
+            if (taskText === "") {
+                alert("Please enter something");
+                return;
+            }
+
+            let li = document.createElement("li");
+            li.innerHTML = `
+                <div
+                    <span>${taskText}</span>
+                </div>
+                <div>
+                    <span onclick="del(this)" style="cursor: pointer;">❌</span>
+                </div>
+            `;
+
+            document.getElementById("taskList").appendChild(li); // Append to task list
+
+            input1.value = "";
+        }
+
+        function del(task) {
+            task.parentElement.parentElement.remove(); // Remove the clicked task
+        }
+    </script>
+</body>
+
+</html>
